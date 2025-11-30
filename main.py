@@ -191,7 +191,7 @@ def handle_web_requests():
                 
         conn.close()
     except:
-        pass  # No client connected, just continue
+        pass  # No client connected, just continue we dont care
 
 def check_shutter():
     global last_shutter_state
@@ -226,3 +226,4 @@ while True:
     check_shutter()
     handle_web_requests()
     time.sleep(0.01)
+# this should work lol
