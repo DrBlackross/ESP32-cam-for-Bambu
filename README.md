@@ -200,3 +200,16 @@ Activate your programming session:
 This gives you a clean, reproducible setup for programming your ESP32-CAM! CAKE! (no)
 After this........ you can then assemble your printed ["Esp32-camera case"](https://makerworld.com/en/models/1220385-esp32-cam-case-kit-snap-fit-ball-joint?from=search#profileId-1497664), power it up and mount your microswitch above the swiper with paper clips, painters tape, gum.... i don't know mounting is your call with the switch, enjoy. lol
 
+I did use this ["poop catcher"](https://makerworld.com/en/models/451897-compact-poop-bucket-s-a1-a1-mini#profileId-416433) and added a rectangle cube on the top (just extended the surface area). 
+
+![20251130_175958](https://github.com/user-attachments/assets/cbf6aab0-b14f-4a50-9c5f-b24a1c4c0ae1)
+
+![20251130_175949](https://github.com/user-attachments/assets/287b0cff-47d6-48c2-a1bb-57b9a96bb250)
+
+
+###### It should work as soon as i finish printing the extentions for the camera mount.
+
+BUT, mount the switch on the modified poop catcher, screw in first front screw and the second one, but tighten the first down to hold the switch on the catcher. clip the catcher onto the printhead and home your axis... then after homing move the printhead all the way "-X" as far as it can go, then slide the switch gently to the right till it clicks, and lock it in place with that second screw as a set screw.
+
+There is only 1 hole in the catcher to hold the switch in place.
+
