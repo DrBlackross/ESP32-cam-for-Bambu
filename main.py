@@ -36,7 +36,6 @@ LOG_FOLDER = SD_MOUNT_POINT + "/" + LOG_FOLDER_NAME
 shutter = machine.Pin(SHUTTER_PIN, machine.Pin.IN, machine.Pin.PULL_UP)
 picture_count = 0
 last_shutter_state = None
-# Removed flash_led variable as requested
 
 def get_formatted_time():
     """Get formatted time string for MicroPython"""
