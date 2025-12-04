@@ -1,4 +1,8 @@
-# boot.py - Run on boot to start main application
+# boot.py - Run on boot to start main application 
+# this helps with the reboot command on the webpage, just serial in and control+C to break the loop till you >>> 
+# then you can ampy --port /dev/ttyUSB0 put main.py (if you change settings), if not the boot.py will keep reloading
+# just mash the crap out of CTRL+C a bunch LOL
+
 import time
 import machine
 import sys
