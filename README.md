@@ -105,9 +105,41 @@ Also you can change the name of the camera to something else instead of Bambu-Ca
 
     DEVICE_NAME = "Bambu-Camera"
 
+> ADDED MORE SETTINGS
+
+# --- CAMERA QUALITY/BRIGHTNESS CONFIGURATION ---
+# The named constants (UXGA, SXGA, XGA) are not supported. 
+CAMERA_RESOLUTION = 10 # XGA (1024x768) is index 10
+# JPEG Quality: 8 (High Quality)
+JPEG_QUALITY = 8 
+# ---------------------------------------------
+
+(sdcard was anonying for me)
+
+# === SD CARD FIX: FILE SYSTEM DEFINITIONS ===
+# Use /sd as the mount point, as set in previous successful boot logs.
+SD_MOUNT_POINT = "/sd"
+PHOTO_FOLDER_NAME = "photos"
+LOG_FOLDER_NAME = "logs"
+
+# Full Paths (Must be used for all file operations)
+PHOTO_FOLDER = SD_MOUNT_POINT + "/" + PHOTO_FOLDER_NAME
+LOG_FOLDER = SD_MOUNT_POINT + "/" + LOG_FOLDER_NAME
+# ===============================================
+
+# Initialize
+shutter = machine.Pin(SHUTTER_PIN, machine.Pin.IN, machine.Pin.PULL_UP)
+picture_count = 0
+last_shutter_state = None
+
+
+(Then after you've updated you script then you need to "put" over main.py THEN boot.py
+once the esp32 resets boot.py will take over, its only there for 'rebooting' off the webpage)
+
 ##### Upload using ampy (works best for me)
     ampy --port /dev/ttyUSB0 put main.py
-
+    ampy --port /dev/ttyUSB0 put boot.py
+    
 ##### Verify upload
     ampy --port /dev/ttyUSB0 ls
 
@@ -131,6 +163,8 @@ Also you can change the name of the camera to something else instead of Bambu-Ca
     screen /dev/ttyUSB0 115200
 
   watch the boot up of the esp32cam module for WIFI, button presses, errors, etc..
+
+ (screen commands are CTRL+A then K to kill the console session (not the esp32), but with boot.py running you will have to hit CTRL+C a few times to break the boot.py loop and set the esp32 to >>> for the micropython IDE, from there you can CTRL+a K and the screen session and use ampy to reupload another version of the main.py, if not you'll get a ttyUSB0 in use, etc...)
 
 3. repeat if needed
 
